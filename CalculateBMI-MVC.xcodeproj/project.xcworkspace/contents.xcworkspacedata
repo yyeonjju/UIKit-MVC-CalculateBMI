@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/hayeonju/Desktop/AllenSwift/UIKitApp/UIKit-CalculateBMI/CalculateBMI-MVC.xcodeproj">
+      location = "self:">
    </FileRef>
 </Workspace>
