@@ -9,7 +9,17 @@ import Foundation
 import UIKit
 
 struct BMICalculatorManager {
-    var bmi : BMI = BMI(value: 0.0, matchColor: .clear , advice: "")
+    
+    //private 키워드 사용해서 외부에서 직접적으로 속성에 접근하지 못하게
+    private var bmi : BMI = BMI(value: 0.0, matchColor: .clear , advice: "")
+    
+    //private 키워드로 bmi 속성을 외부에서 접근하지 못하도로고 만들었기 때문에 이런 메서드로 외부에서 값을 간접적으로 접근할 수 있게 만들어야함
+    mutating func getBmi (height : String, weight : String) -> BMI {
+        self.calculateBMI(h: height, w: weight)
+
+        return bmi
+    }
+    
     
     // 구조체에서 본인의 속성을 바꾸려면 mutating 키워드 필요
     mutating func calculateBMI (h:String, w:String) {
